@@ -3,46 +3,51 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> Machine Learning Final Project — Ying Jin</title>
+  <title>Styled Reveal.js Deck</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reset.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/white.css" />
+  <style>
+    :root {
+      --r-background-color: #f8fafc;
+      --r-main-color: #334155;
+      --r-heading-color: #0f172a;
+      --r-link-color: #4f46e5;
+    }
+    .accent { color: #4f46e5; }
+  </style>
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
-      <!-- Slide 1: Title -->
-      <section>
-        <h2>Machine Learning Final Project</h2>
-        <p>Ying Jin &middot; 2026</p>
+
+      <!-- Slide 1: Dark Navy Title Slide -->
+      <section data-background-color="#0f172a">
+        <h2>Accessible Data Engineering</h2>
+        <p style="color: #94a3b8;">Ying Jin &middot; 2026</p>
       </section>
 
-      <!-- Slide 2: Bullet Points -->
+      <!-- Slide 2: Uses the global #f8fafc light background -->
       <section>
-        <h3>Key Takeaways</h3>
-        <ul>
-          <li class="fragment">Semantic structure improves screen reader navigation</li>
-          <li class="fragment">Automated audits catch ~30% of accessibility issues</li>
-          <li class="fragment">Clean data schemas power reliable pipelines</li>
-        </ul>
+        <h3>Why <span class="accent">Accessibility</span> Matters</h3>
+        <p>Designing inclusive interfaces benefits every user and improves data clarity.</p>
       </section>
 
-      <!-- Slide 3: Code Example -->
-      <section>
-        <h3>Python Example</h3>
-        <pre><code data-trim>
-def summarize(records):
-    return [r for r in records if r.is_valid()]
-        </code></pre>
+      <!-- Slide 3: Soft Gradient Accent Slide -->
+      <section data-background-gradient="linear-gradient(135deg, #eef2ff 0%, #f8fafc 100%)">
+        <h3>Thank You &amp; Q&amp;A</h3>
+        <p><a href="../index.html">&larr; Back to yingjin.github.io</a></p>
       </section>
+
     </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
   <script>
     Reveal.initialize({
-      hash: true, // Updates the URL per slide so links can jump to specific slides
-      slideNumber: true
+      hash: true,
+      slideNumber: true,
+      backgroundTransition: 'fade' // Smoothly cross-fades background colors between slides
     });
   </script>
 </body>
